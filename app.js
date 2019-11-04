@@ -1,21 +1,20 @@
 console.log('worked');
 
-//за каждый полную 1000 - 100 бонус
+const purchase = 1000;
 
-const purchase = 10000;
+const red = 1000;
+const silver = 10000;
+const gold = 100000;
+
 let bonus;
 
-if (purchase < 1000){
-    bonus = 'Purchase less than 1000rub - no bonuses';
-    console.log(bonus);
-} else if (purchase < 10000) {
-    bonus = Math.floor(purchase/1000);
-    console.log('Sum of your bonuses: ', bonus*100);
-} else if (purchase < 100000) {
-    bonus = Math.floor(purchase/1000);
-    console.log('Sum of your bonuses: ', bonus*100);
+if (purchase < red){
+    bonus = 0;
+    console.log('Sum of your bonuses: ', bonus);
+} else if (purchase < silver) {
+    bonus = Math.floor(purchase/1000)*100;
+    console.log('Sum of your bonuses: ', bonus);
 } else {
-    bonus = 'Please, buy our company';
-    console.log(bonus);
+    bonus = Math.floor(purchase/1000)*100;
+    console.log('Sum of your bonuses: ', bonus);
 }
-
